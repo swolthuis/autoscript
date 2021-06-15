@@ -16,7 +16,7 @@
 #####################
 sudo apt-get update && sudo apt-get upgrade -y
 
-sudo apt install python3.8 vim curl -y
+sudo apt install python3.8 vim net-tools curl -y
 
 if test -f "/etc/salt"; then
   printf "salt is al geinstalleerd"
@@ -46,7 +46,7 @@ sudo systemctl restart salt-minion
 sudo apt install snmp snmpd git-all -y
 
 #correcte snmpd.conf
-sudo git clone https://github.com/swolthuis/snmpd.conf.git
+#sudo git clone https://github.com/swolthuis/snmpd.conf.git
 sudo mv snmpd.conf/snmpd.conf /etc/snmp
 
 sudo systemctl start snmpd
