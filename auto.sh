@@ -26,11 +26,9 @@ else
 fi
 
 
-
-sudo systemctl start salt-minion
 sudo systemctl enable salt-minion
 sudo systemctl restart salt-minion
-
+sudo systemctl start salt-minion
 
 #Op de master voor lijst van keys
 #sudo salt-key -L
@@ -49,9 +47,10 @@ sudo apt install snmp snmpd git-all -y
 sudo git clone https://github.com/swolthuis/autoscript.git
 sudo mv autoscript/snmpd.conf /etc/snmp
 
-sudo systemctl start snmpd
+
 sudo systemctl enable snmpd
 sudo systemctl restart snmpd
+sudo systemctl start snmpd
 
 #####################
 #######docker########
@@ -77,5 +76,5 @@ sudo docker run hello-world
 
 
 
-#check welke services runnen
-sudo systemctl is-active --quiet SERVICE && printf "SERVICE is running\n" || printf "SERVICE is NOT running\n"
+#check welke services active zijn
+sudo systemctl --type=service --state=active
