@@ -46,7 +46,7 @@ sudo apt install snmp snmpd git-all -y
 #correcte snmpd.conf
 sudo git clone https://github.com/swolthuis/autoscript.git
 sudo mv autoscript/snmpd.conf /etc/snmp
-
+sudo mv autoscript/rsyslog.conf /etc
 
 sudo systemctl enable snmpd
 sudo systemctl restart snmpd
