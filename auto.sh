@@ -46,8 +46,8 @@ sudo systemctl restart salt-minion
 sudo apt install snmp snmpd git-all -y
 
 #correcte snmpd.conf
-#sudo git clone https://github.com/swolthuis/snmpd.conf.git
-sudo mv snmpd.conf/snmpd.conf /etc/snmp
+sudo git clone https://github.com/swolthuis/autoscript.git
+sudo mv autoscript/snmpd.conf /etc/snmp
 
 sudo systemctl start snmpd
 sudo systemctl enable snmpd
