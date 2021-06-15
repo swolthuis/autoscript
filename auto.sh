@@ -74,6 +74,20 @@ fi
 sudo docker run hello-world 
 
 
+#########################
+#######wordpress#########
+#########################
+sudo apt update
+sudo apt install apache2 php libapache2-mod-php mysql-server -y
+sudo systemctl enable apache2
+sudo systemctl restart apache2
+
+sudo curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+sudo chmod +x wp-cli.phar
+sudo mv wp-cli.phar /usr/local/bin/wp-cli
+
+wp-cli core download
+
 
 
 #check welke services active zijn
