@@ -18,7 +18,7 @@ sudo apt-get update && sudo apt-get upgrade -y
 
 sudo apt install python3.8 vim net-tools curl -y
 
-if test -f "/etc/salt"; then
+if test -f "/etc/salt/"; then
   printf "salt is al geinstalleerd"
 else
   sudo curl -o bootstrap_salt.sh -L https://bootstrap.saltstack.com/
@@ -60,7 +60,7 @@ sudo systemctl restart snmpd
 sudo apt-get update
 sudo apt-get install apt-transport-https ca-certificates gnupg lsb-release -y
 
-if test -f "/etc/docker"; then
+if test -f "/etc/docker/"; then
   printf "docker is al geinstalleerd"
 else
   sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
