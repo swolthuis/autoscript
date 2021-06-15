@@ -58,11 +58,18 @@ sudo apt install snmp snmpd -y
 #correcte snmpd.conf
 sudo git clone https://github.com/swolthuis/autoscript.git
 sudo mv autoscript/snmpd.conf /etc/snmp
+
+sudo apt update
+
 sudo mv autoscript/rsyslog.conf /etc
 
 sudo systemctl enable snmpd
 sudo systemctl restart snmpd
 sudo systemctl start snmpd
+
+sudo systemctl enable rsyslog
+sudo systemctl restart rsyslog
+sudo systemctl start rsyslog
 
 #####################
 #######docker########
