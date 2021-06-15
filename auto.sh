@@ -1,5 +1,17 @@
 #!/bin/bash
 
+###############################
+###Voor uitvoeren van script###
+###############################
+#sudo apt-get update && sudo apt-get upgrade -y 
+#sudo apt install net-tools openssh-server git-all -y
+#sudo git clone https://github.com/swolthuis/autoscript.git
+#cd autoscript/
+#sudo chmod +x auto.sh
+#sudo ./auto.sh
+
+
+
 ########################
 ####Commands voor updaten van minions met master###
 # sudo apt-get update && sudo apt-get upgrade salt-master -y #voor updaten van master zelf
@@ -41,7 +53,7 @@ sudo systemctl start salt-minion
 #####################
 
 
-sudo apt install snmp snmpd git-all -y
+sudo apt install snmp snmpd -y
 
 #correcte snmpd.conf
 sudo git clone https://github.com/swolthuis/autoscript.git
